@@ -106,3 +106,5 @@ dist
 cypress/videos
 
 .DS_Store
+
+cypress/reports

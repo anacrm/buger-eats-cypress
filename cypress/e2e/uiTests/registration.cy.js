@@ -3,32 +3,9 @@ import SignupPage from "../../pages/SignupPage"
 import createCourier from "../../factories/SignupFactory"
 
 
-//suit
+//suite
 describe('Registration', () => {
     const signup = new SignupPage()
-
-
-    /*  before(() => {
-          cy.log('everything here is executed one time BEFORE ALL tests')
-      })
-      beforeEach(() => {
-          cy.log('everything here is executed always BEFORE EACH tests')
-      })
-  
-      after(() => {
-          cy.log('everything here is executed one time AFTER ALL tests')
-      })
-  
-      afterEach(() => {
-          cy.log('everything here is executed always AFTER EACH tests')
-      })*/
-
-    /* beforeEach(() => {
- 
-         cy.fixture('courier.json').then((data) => {
-             courier = data
-         })
-     })*/
 
     it('User should be a courier', () => {
 
@@ -38,7 +15,7 @@ describe('Registration', () => {
         signup.fillForm(courier)
         signup.submit()
         const expectedMessage = "Recebemos os seus dados. Fique de olho na sua caixa de email, pois e em breve retornamos o contato."
-        signup.modalContentShouldbe(expectedMessage)
+        signup.modalContentShouldBe(expectedMessage)
 
     })
     it('User should not register with invalid document', () => {
